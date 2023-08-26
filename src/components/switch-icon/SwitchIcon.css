@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+.switch-icon {
+  position: absolute;
+  top: 35px;
+  right: 15px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.material-icons {
+  font-size: 40px;
+  color: #333;
+}

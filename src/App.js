@@ -1,23 +1,23 @@
-import logo from './logo.svg';
+import React, {useState} from 'react';
+import ViewModule from './components/view-module/ViewModule';
+import ViewList from './components/view-list/ViewList';
+import SwitchIcon from './components/switch-icon/SwitchIcon';
+import products from './products';
 import './App.css';
 
 function App() {
+
+  const [isTrue, setIsTrue] = useState(true);
+  const onSwitch = (e) => {
+    isTrue === true ? setIsTrue(false) : setIsTrue(true);
+  }
+  
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <SwitchIcon onSwitch={onSwitch} isTrue={ isTrue } />
+      {isTrue ? <ViewModule props={products} /> : <ViewList props={products} />}
+      
     </div>
   );
 }

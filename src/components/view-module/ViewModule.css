@@ -1,0 +1,44 @@
+.view-module {
+  padding-top: 100px;
+  display: grid;
+  justify-content: center;
+  gap: 40px;
+  grid-template-columns: repeat(3, minmax(200px, 400px));
+}
+
+.card__item {
+  background-color: #f4f4f4;
+  padding: 20px 30px;
+  box-shadow: 0 6px 8px rgba(0,0,0,0.5);
+}
+
+.item-image {
+  flex: 1 1 auto;
+  max-width: 100%;
+}
+
+.item-title {
+  font-size: 28px;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.item-img {
+  max-width: 100%;
+  width: 200%;
+  height: 200px;
+  object-fit: contain;
+}
+
+.item__price {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.price-content {
+  font-size: 500px;
+  font-size: 18px;
+  color: red;
+}
+
